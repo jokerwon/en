@@ -1,4 +1,8 @@
-# Improve a function
+---
+title: Improve a function
+---
+
+# {{ $frontmatter.title }}
 
 ## Question
 
@@ -30,8 +34,7 @@ function excludeItems(items, excludes) {
 3. What is the time complexity of this function?
 4. How would you optimize it ?
 
-> *note*
->
+> [!NOTE]
 > we only judge by the result, not the time cost. please submit the best approach you can.
 
 ## Analysis
@@ -40,6 +43,7 @@ function excludeItems(items, excludes) {
 
 The function is **intended** to exclude items from `items` that match any `key:value` pair in `excludes`. However, it actually **retains** only the items that match all the specified key-value pairs, which is the **opposite** of the intended behavior.
 
+> [!TIP]
 > [intend](https://dict.youdao.com/result?word=intend&lang=en)  /ɪnˈtend/  v. design or destine
 >
 > [retain](https://dict.youdao.com/result?word=retain&lang=en)  /rɪˈteɪn/  v. hold within
@@ -53,6 +57,7 @@ No.
 - The name `excludeItems` and the structure of the `excludes` array **imply** we should remove any item that matches any of the key-value pairs in `excludes`.
 - But this function keeps only those items that match all key-value pairs due to repeated `filter()` with `===` condition (logical AND behavior across filters).
 
+> [!TIP]
 > [imply](https://dict.youdao.com/result?word=imply&lang=en)  / ɪmˈplaɪ /  v. express or state indirectly
 
 ##### 3. What is the time complexity of this function?
