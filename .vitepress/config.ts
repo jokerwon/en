@@ -1,13 +1,10 @@
 import { defineConfig } from 'vitepress'
 import glob from 'fast-glob'
 
-const stage2 = await glob('camp/stage-1/*.md')
-console.log(stage2)
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'My English Notes',
-  description: 'A VitePress Site',
+  title: 'EN',
+  description: 'My English Notes',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

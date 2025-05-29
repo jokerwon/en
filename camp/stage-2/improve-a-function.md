@@ -82,7 +82,7 @@ function excludeItems(items, excludes) {
 - For each item, we check if any of its property matches an exclude pair.
 - We exclude the item if any match is found (`some` + `!`).
 
-## My try
+## My Try
 
 ~~~js
 /**
