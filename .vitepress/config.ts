@@ -11,11 +11,18 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
+      { text: 'Phrase', link: '/phrase/section-1' },
       { text: 'Camp', link: '/camp/' },
       { text: 'Pronunciation', link: '/pronunciation/consonant' },
     ],
 
     sidebar: {
+      '/phrase/': [
+        {
+          text: 'Phrase',
+          items: await getSidebarItems('phrase/*.md'),
+        },
+      ],
       '/camp/': [
         {
           text: 'Camp',

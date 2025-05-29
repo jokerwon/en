@@ -1,1 +1,1 @@
-# Hello
+# Notes for Camp

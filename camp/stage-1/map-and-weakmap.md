@@ -17,4 +17,5 @@
 ------
 
 **Interviewer**: Great. Now, if I have a `Map` and a `WeakMap`, and I want to check if a key exists in both, what methods would I use and are there any differences in how they work?
+
 **Interviewee**: For both `Map` and `WeakMap`, you can use the `has(key)` method to check if a key exists. But in a `Map`, you can use any type of key for this check. In a `WeakMap`, the key must be an object. Also, because `WeakMap` keys are weakly referenced, the object used as a key might be garbage - collected between the time you add it and the time you check with `has()`. So, you need to be aware that the result might be affected by the garbage collection process.

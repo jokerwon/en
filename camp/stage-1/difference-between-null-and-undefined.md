@@ -25,6 +25,8 @@ Also, when a function doesn't return anything, it implicitly returns undefined.
 let user = null; // user data not loaded yet
 ```
 
+------
+
 **Interviewer**: Interestingly, what do these two types return when using the typeof operator?
 
 **Candidate**: That's a great question. typeof undefined returns "undefined", which makes sense. But interestingly, typeof null returns "object", which is actually a historical bug in JavaScript that was never fixed for compatibility reasons.
@@ -43,6 +45,8 @@ But when using triple equals (===), which compares both value and type, it retur
 console.log(null === undefined); // false
 ```
 
+------
+
 **Interviewer**: You mentioned undefined is not a reserved word. What implications does this have?
 
 **Candidate**: Since undefined is not a reserved word, theoretically it can be reassigned, which might cause unexpected behavior in code:
@@ -57,8 +61,12 @@ This would throw an error in strict mode, but is allowed in non-strict mode. To 
 let safeUndefined = void 0;
 ```
 
+------
+
 **Interviewer**: Very comprehensive answer! One last question: can you briefly explain why we need these two different "empty value" concepts?
 
 **Candidate**: That's a great question. The reason for having both is mainly to express different semantics: undefined represents a "not yet assigned" state, it's a system-level, default empty value; while null represents an "intentionally missing value", actively set by the programmer. This distinction makes code intentions clearer and helps us understand why a variable is empty.
+
+------
 
 **Interviewer**: Excellent explanation, thank you for your answer!

@@ -2,6 +2,8 @@
 
 **Candidate**: You actually can't use the `new` keyword with arrow functions. If you try, JavaScript will throw a TypeError saying that the arrow function is not a constructor. This is because arrow functions were specifically designed without several features that regular functions have, including their own `this` binding and a prototype property, which are essential for constructor functions.
 
+------
+
 **Interviewer**: That's correct. Could you explain why this happens by walking through how the `new` operator works?
 
 **Candidate**: Sure! When the `new` operator is used with a function, it follows four main steps:
@@ -13,6 +15,8 @@
 
 Arrow functions can't work with this process because they don't have their own `this` binding - they inherit `this` from their surrounding scope. They also don't have a prototype property. So the second and third steps of the `new` operation can't be properly executed with arrow functions.
 
+------
+
 **Interviewer**: Excellent explanation. Could you elaborate on the key differences between arrow functions and regular functions?
 
 **Candidate**: Absolutely. There are several important differences:
@@ -23,6 +27,8 @@ Arrow functions can't work with this process because they don't have their own `
 4. **Cannot be used as constructors**: As we discussed, arrow functions can't be used with the `new` keyword.
 5. **No prototype**: Arrow functions don't have a `prototype` property.
 6. **Cannot be used as generator functions**: Arrow functions can't use the `yield` keyword and can't be generator functions.
+
+------
 
 **Interviewer**: Can you give me a practical example where using an arrow function would be preferable to a regular function, and another example where it would be problematic?
 
@@ -70,6 +76,8 @@ const person = {
 }
 person.greet() // Outputs: "Hello, my name is John"
 ```
+
+------
 
 **Interviewer**: That's a great practical example. One last question: I noticed in your explanation that object literals with curly braces don't create a new lexical environment for `this`. Could you clarify why that is?
 

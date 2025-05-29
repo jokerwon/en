@@ -17,4 +17,5 @@
 ------
 
 **Interviewer**: Great. Let's say we have a function that calls another function. How does the execution context work in this case?
+
 **Interviewee**: Well, when the outer function is called, a function execution context is created for it and pushed onto the stack. Then, when the inner function is called, a new execution context is created for that inner function and pushed on top of the stack. The engine will execute the inner function first. After it's done, its execution context is popped off the stack, and then the engine continues with the rest of the outer function's execution context. For example, if we have `function outer() { inner(); } function inner() { console.log('Inside inner'); } outer();`, first the global execution context is on the stack. When `outer` is called, its execution context is pushed. Then when `inner` is called, its execution context is pushed on top. After `inner` prints the log, its context is popped, and then the rest of `outer`'s context is processed.
