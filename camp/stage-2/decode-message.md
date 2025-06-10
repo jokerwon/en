@@ -27,7 +27,7 @@ The way to collect the message is as follows
 
 > [!TIP]
 >
-> [diagonally]() /daɪˈæɡənəli/ _adv_. 对角地, in a diagonal manner
+> [diagonally](https://dict.youdao.com/result?word=diagonally&lang=en) /daɪˈæɡənəli/ _adv_. 对角地, in a diagonal manner
 
 ## Sample Answer
 
